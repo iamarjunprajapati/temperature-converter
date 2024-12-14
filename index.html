@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight converter</title>
+</head>
+
+<body>
+    <div
+        class="body-container w-full h-[100vh] bg-gradient-to-tl to-purple-500 from-blue-500 flex justify-center items-center text-white">
+        <div class="w-[40%] h-[60%] bg-[rgba(255,255,255,.1)] shadow-xl rounded-xl p-10">
+            <h1 class="text-4xl font-bold mb-10">Weight Converter</h1>
+            <div class="flex mb-4">
+                <p class="font-semibold ">Pounds : </p> <input type="number"
+                    class="bg-transparent border-2 focus:outline-none py-1 rounded ml-4" name="pound" id="pound">
+            </div>
+            <p>Your weight in kg is : <span id="weight" class="font-bold"></span></p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        let pound = document.querySelector('#pound');
+        let kg = 0.4535924;
+        let weight = document.querySelector('#weight');
+        pound.addEventListener('input',()=>{
+            console.log(pound.value, kg);
+            poundValue = pound.value;
+            let totalWeight = poundValue * kg;
+            weight.innerText = totalWeight.toFixed(2);
+        })
+        
+        
+
+    </script>
+</body>
+
+</html>
